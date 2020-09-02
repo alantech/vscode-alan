@@ -1,7 +1,7 @@
 {
     "name": "alan-lang",
-    "displayName": "Alan Lang",
-    "description": "Syntax highlighting for Alan lang",
+    "displayName": "Alan",
+    "description": "Syntax highlighting for Alan Lang",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.48.0"
@@ -9,6 +9,9 @@
     "categories": [
         "Programming Languages"
     ],
+    "icon": "images/logo.png",
+    "repository": "https://github.com/alantech/vscode-alan",
+    "publisher": "alantech",
     "contributes": {
         "languages": [{
             "id": "alan",
