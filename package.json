@@ -2,7 +2,7 @@
     "name": "alan-lang",
     "displayName": "Alan",
     "description": "Syntax highlighting for Alan Lang",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "engines": {
         "vscode": "^1.48.0"
     },
@@ -13,16 +13,25 @@
     "repository": "https://github.com/alantech/vscode-alan",
     "publisher": "alantech",
     "contributes": {
-        "languages": [{
-            "id": "alan",
-            "aliases": ["Alan", "alan"],
-            "extensions": [".ln"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "alan",
-            "scopeName": "source.ln",
-            "path": "./syntaxes/alan.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "alan",
+                "aliases": [
+                    "Alan",
+                    "alan"
+                ],
+                "extensions": [
+                    ".ln"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "alan",
+                "scopeName": "source.ln",
+                "path": "./syntaxes/alan.tmLanguage.json"
+            }
+        ]
     }
 }
