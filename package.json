@@ -2,7 +2,7 @@
     "name": "alan-lang",
     "displayName": "Alan",
     "description": "Syntax highlighting for Alan Lang",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^1.48.0"
     },

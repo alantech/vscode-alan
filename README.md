@@ -6,4 +6,4 @@ This is a vscode extension to support syntax highlighting for the [Alan Programm
 
 Syntax Highlighting for `.ln` files
 
-\!\[feature X\]\(images/sh.png\)
+![](images/sh.png)
