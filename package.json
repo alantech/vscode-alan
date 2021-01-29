@@ -3,6 +3,7 @@
     "displayName": "Alan",
     "description": "Syntax highlighting for Alan Lang",
     "version": "0.1.0",
+    "license": "Apache-2.0",
     "engines": {
         "vscode": "^1.48.0"
     },
