@@ -1,0 +1,96 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Alan Microcode",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#doubleQuoteStrings"
+    },
+    {
+      "include": "#comment"
+    },
+    {
+      "include": "#booleans"
+    },
+    {
+      "include": "#numbers"
+    }
+  ],
+  "repository": {
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.block",
+					"begin": "(/\\*)(?:\\s*((@)internal)(?=\\s|(\\*/)))?",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.definition.comment"
+						},
+						"2": {
+							"name": "storage.type.internaldeclaration"
+						},
+						"3": {
+							"name": "punctuation.decorator.internaldeclaration"
+						}
+					},
+					"end": "\\*/",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment"
+						}
+					}
+				},
+				{
+					"begin": "(^[ \\t]+)?((//)(?:\\s*((@)internal)(?=\\s|$))?)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.whitespace.comment.leading"
+						},
+						"2": {
+							"name": "comment.line.double-slash"
+						},
+						"3": {
+							"name": "punctuation.definition.comment"
+						},
+						"4": {
+							"name": "storage.type.internaldeclaration"
+						},
+						"5": {
+							"name": "punctuation.decorator.internaldeclaration"
+						}
+					},
+					"end": "(?=$)",
+					"contentName": "comment.line.double-slash"
+				}
+			]
+		},
+    "keywords": {
+      "patterns": [{
+        "name": "keyword.control",
+        "match": "\\b(event|fn|on|return|const|let|emit)\\b"
+      }]
+    },
+    "numbers": {
+      "match": "\\b(\\-?[0-9]+\\.?[0-9]*)(i8|i16|i32|i64|f32|f64)\\b",
+      "name": "string.other"
+    },
+    "booleans": {
+      "patterns": [{
+        "name": "string.other",
+        "match": "\\b(true|false)\\b"
+      }]
+    },
+    "doubleQuoteStrings": {
+      "name": "string.quoted.double",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [{
+        "name": "constant.character.escape",
+        "match": "\\\\."
+      }]
+    }
+  },
+  "scopeName": "source.amm"
+}

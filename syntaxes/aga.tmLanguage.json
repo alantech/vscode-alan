@@ -1,0 +1,66 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Alan Graphcode",
+  "patterns": [
+    {
+      "include": "#header"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#symbols"
+    },
+    {
+      "include": "#booleans"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#lineno"
+    },
+    {
+      "include": "#address"
+    }
+  ],
+  "repository": {
+    "header": {
+      "patterns": [{
+        "name": "header",
+        "match": "\\b(Alan Graphcode Assembler v[0-9]+\\.[0-9]+\\.[0-9]+)\\b"
+      }]
+    },
+    "keywords": {
+      "patterns": [{
+        "name": "keyword.control",
+        "match": "\\b(globalMem|customEvents|handler|for|with|size)\\b"
+      }]
+    },
+    "booleans": {
+      "patterns": [{
+        "name": "string.other",
+        "match": "\\b(true|false)\\b"
+      }]
+    },
+    "numbers": {
+      "patterns": [{
+        "name": "constant.numeric",
+        "match": "\\b(\\-?[0-9]+\\.?[0-9]*)\\b"
+      }]
+    },
+    "lineno": {
+      "patterns": [{
+        "name": "meta.tag",
+        "match": "\\b(\\#[0-9]+)\\b"
+      }]
+    },
+    "address": {
+      "patterns": [{
+        "name": "meta.preprocessor",
+        "match": "\\b(@[0-9]+)\\b"
+      }]
+    }
+  },
+  "scopeName": "source.aga"
+}

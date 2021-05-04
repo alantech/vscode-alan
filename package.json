@@ -22,9 +22,32 @@
                     "alan"
                 ],
                 "extensions": [
-                    ".ln"
+                    ".ln",
+                    ".lnn"
                 ],
                 "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "alan microcode",
+                "aliases": [
+                    "Alan Microcode",
+                    "alan microcode"
+                ],
+                "extensions": [
+                    ".amm"
+                ],
+                "configuration": "./amm-language-configuration.json"
+            },
+            {
+                "id": "alan graphcode",
+                "aliases": [
+                    "Alan Graphcode",
+                    "Alan GraphCode",
+                    "alan graphcode"
+                ],
+                "extensions": [
+                  ".aga"
+                ]
             }
         ],
         "grammars": [
@@ -32,6 +55,16 @@
                 "language": "alan",
                 "scopeName": "source.ln",
                 "path": "./syntaxes/alan.tmLanguage.json"
+            },
+            {
+                "language": "alan microcode",
+                "scopeName": "source.amm",
+                "path": "./syntaxes/amm.tmLanguage.json"
+            },
+            {
+                "language": "alan graphcode",
+                "scopeName": "source.aga",
+                "path": "./syntaxes/aga.tmLanguage.json"
             }
         ]
     }
