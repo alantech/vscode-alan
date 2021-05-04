@@ -18,6 +18,9 @@
       "include": "#numbers"
     },
     {
+      "include": "#strings"
+    },
+    {
       "include": "#lineno"
     },
     {
@@ -27,14 +30,14 @@
   "repository": {
     "header": {
       "patterns": [{
-        "name": "header",
+        "name": "keyword.control",
         "match": "\\b(Alan Graphcode Assembler v[0-9]+\\.[0-9]+\\.[0-9]+)\\b"
       }]
     },
     "keywords": {
       "patterns": [{
         "name": "keyword.control",
-        "match": "\\b(globalMem|customEvents|handler|for|with|size)\\b"
+        "match": "\\b(globalMem|customEvents|handler for|with size)\\b"
       }]
     },
     "booleans": {
@@ -46,19 +49,28 @@
     "numbers": {
       "patterns": [{
         "name": "constant.numeric",
-        "match": "\\b(\\-?[0-9]+\\.?[0-9]*)\\b"
+        "match": "\\b(\\-?[0-9]+\\.?[0-9]*(i8|i16|i32|i64|f32|f64)?\\b"
+      }]
+    },
+    "strings": {
+      "name": "string.quoted.double",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [{
+        "name": "constant.character.escape",
+        "match": "\\\\."
       }]
     },
     "lineno": {
       "patterns": [{
-        "name": "meta.tag",
-        "match": "\\b(\\#[0-9]+)\\b"
+        "name": "keyword.operator",
+        "match": "\\#[0-9]+"
       }]
     },
     "address": {
       "patterns": [{
-        "name": "meta.preprocessor",
-        "match": "\\b(@[0-9]+)\\b"
+        "name": "entity.name.tag",
+        "match": "@\\-?[0-9]+"
       }]
     }
   },
