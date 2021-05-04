@@ -28,10 +28,10 @@
                 "configuration": "./language-configuration.json"
             },
             {
-                "id": "alan microcode",
+                "id": "alan--",
                 "aliases": [
-                    "Alan Microcode",
-                    "alan microcode"
+                    "Alan--",
+                    "alan--"
                 ],
                 "extensions": [
                     ".amm"
@@ -57,7 +57,7 @@
                 "path": "./syntaxes/alan.tmLanguage.json"
             },
             {
-                "language": "alan microcode",
+                "language": "alan--",
                 "scopeName": "source.amm",
                 "path": "./syntaxes/amm.tmLanguage.json"
             },
