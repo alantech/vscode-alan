@@ -7,3 +7,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 
 - Initial release
+
+## 0.1.1
+- Added support for `.amm` and `.aga` files
+- Added temporary support for `.lnn` files
