@@ -141,7 +141,13 @@
 		"singleQuoteStrings": {
 			"name": "string.quoted.single",
 			"begin": "'",
-			"end": "'"
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape",
+					"match": "\\\\."
+				}
+			]
 		}
 	},
 	"scopeName": "source.ln"
